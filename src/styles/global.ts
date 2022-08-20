@@ -18,6 +18,10 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
+  p {
+    line-height: 1.6;
+  }
+
   body, input, textarea, button {
     font: 400 1rem 'Nunito', sans-serif;
   }
@@ -34,12 +38,12 @@ export const LinkButton = styled.a`
   font-weight: bold;
 
   color: ${({ theme }) => theme['blue-300']};
-
-  border-bottom: 0;
+  border-bottom: 1px solid ${({ theme }) => theme['gray-600']};
 
   text-decoration: none;
 
   &:hover {
-    border-bottom: 1px solid ${({ theme }) => theme['blue-300']};
+    transition: border-bottom-color 0.2s;
+    border-bottom-color: ${({ theme }) => theme['blue-300']};
   }
 `

@@ -2,7 +2,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { LinkButton } from '../../../../styles/global'
 
-import { Account, Avatar, Bio, Info, Name, UserCardContainer } from './styles'
+import {
+  Account,
+  Avatar,
+  Bio,
+  Info,
+  InfoHeader,
+  UserCardContainer,
+} from './styles'
 
 export function UserCard() {
   return (
@@ -12,14 +19,14 @@ export function UserCard() {
       </Avatar>
 
       <Info>
-        <Name>
+        <InfoHeader>
           <strong>Pedro Lopes</strong>
 
           <LinkButton href="/">
             <span>GITHUB</span>
             <FontAwesomeIcon icon="arrow-up-right-from-square" />
           </LinkButton>
-        </Name>
+        </InfoHeader>
 
         <Bio>
           osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl kasmdlkmasdkl

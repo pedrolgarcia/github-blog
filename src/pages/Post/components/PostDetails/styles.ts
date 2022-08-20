@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const UserCardContainer = styled.div`
+export const PostDetailsContainer = styled.div`
   display: flex;
   align-items: center;
 
@@ -17,15 +17,6 @@ export const UserCardContainer = styled.div`
   background-color: ${({ theme }) => theme['gray-700']};
 `
 
-export const Avatar = styled.figure`
-  img {
-    width: 9.25rem;
-    height: 9.25rem;
-
-    border-radius: 8px;
-  }
-`
-
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,29 +28,23 @@ export const InfoHeader = styled.header`
   justify-content: space-between;
   align-items: center;
 
+  margin-bottom: 1.25rem;
+`
+
+export const Title = styled.h1`
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: ${({ theme }) => theme['gray-50']};
+  line-height: 1.3;
+
   margin-bottom: 0.5rem;
-
-  strong {
-    font-size: 1.5rem;
-    color: ${({ theme }) => theme['gray-50']};
-    line-height: 1.3;
-  }
 `
 
-export const Bio = styled.p`
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  margin-bottom: 1.5rem;
-`
-
-export const Account = styled.div`
+export const Details = styled.div`
   display: flex;
   align-items: center;
 
-  gap: 1.5rem;
+  gap: 2rem;
 
   div {
     display: flex;
@@ -73,7 +58,7 @@ export const Account = styled.div`
     }
 
     span {
-      color: ${({ theme }) => theme['gray-100']};
+      color: ${({ theme }) => theme['gray-300']};
     }
   }
 `
