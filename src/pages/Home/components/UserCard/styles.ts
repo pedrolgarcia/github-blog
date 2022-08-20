@@ -47,15 +47,13 @@ export const Name = styled.header`
   }
 `
 
-export const Bio = styled.div`
-  p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+export const Bio = styled.p`
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 
-    margin-bottom: 1.5rem;
-  }
+  margin-bottom: 1.5rem;
 `
 
 export const Account = styled.div`

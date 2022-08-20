@@ -1,17 +1,17 @@
 import { Outlet } from 'react-router-dom'
 
-import { Content, MainContainer } from './styles'
+import { Content } from './styles'
 
 import { Header } from '../../components/Header'
 
 export function DefaultLayout() {
   return (
-    <MainContainer>
+    <div>
       <Header />
 
       <Content>
         <Outlet />
       </Content>
-    </MainContainer>
+    </div>
   )
 }

@@ -22,19 +22,17 @@ export function UserCard() {
         </Name>
 
         <Bio>
-          <p>
-            osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl kasmdlkmasdkl
-            osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl kasmdlkmasdkl
-            osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl kasmdlkmasdkl
-            osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
-            kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
-            kasmdlkmasdkl osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
-            kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
-            kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
-            kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
-            kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
-            kasmdlkmasdkl
-          </p>
+          osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl kasmdlkmasdkl
+          osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl kasmdlkmasdkl
+          osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl kasmdlkmasdkl
+          osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
+          kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
+          kasmdlkmasdkl osapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
+          kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
+          kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
+          kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
+          kasmdlkmasdklosapdkopskdopaskdopa sdasklasmdkl amskdmklasm dkl asdl
+          kasmdlkmasdkl
         </Bio>
 
         <Account>
