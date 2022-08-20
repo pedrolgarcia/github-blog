@@ -1,3 +1,11 @@
+import { HomeContainer } from './styles'
+
+import { UserCard } from './components/UserCard'
+
 export function Home() {
-  return <h1>Home</h1>
+  return (
+    <HomeContainer>
+      <UserCard />
+    </HomeContainer>
+  )
 }

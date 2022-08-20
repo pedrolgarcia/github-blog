@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -19,6 +19,27 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button {
-    font: 400 1rem 'Roboto', sans-serif;
+    font: 400 1rem 'Nunito', sans-serif;
+  }
+`
+
+export const LinkButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  font-size: 0.75rem;
+  font-weight: bold;
+
+  color: ${({ theme }) => theme['blue-300']};
+
+  border-bottom: 0;
+
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid ${({ theme }) => theme['blue-300']};
   }
 `
