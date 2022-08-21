@@ -37,6 +37,23 @@ export const PostListHeader = styled.header`
   }
 `
 
+export const SearchInput = styled.input`
+  flex: 1;
+
+  padding: 0.75rem 1rem;
+
+  background-color: ${({ theme }) => theme['gray-900']};
+
+  border-radius: 6px;
+  border: 1px solid ${({ theme }) => theme['gray-500']};
+
+  color: ${({ theme }) => theme['gray-200']};
+
+  &::placeholder {
+    color: ${({ theme }) => theme['gray-400']};
+  }
+`
+
 export const PostsList = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -79,7 +79,7 @@ export function UserCard() {
           <div>
             <FontAwesomeIcon icon="user-group" />
             <span>
-              {user && user.followers > 1
+              {user && user?.followers > 1
                 ? `${user?.followers} seguidores`
                 : `${user?.followers} seguidor`}{' '}
             </span>

@@ -1,10 +1,43 @@
-import { HomeContainer, Content, PostsList, PostListHeader } from './styles'
+import { ChangeEvent, useEffect, useState } from 'react'
+
+import {
+  HomeContainer,
+  Content,
+  PostsList,
+  PostListHeader,
+  SearchInput,
+} from './styles'
 
 import { UserCard } from './components/UserCard'
-import { SearchForm } from './components/SearchForm'
 import { PostCard } from './components/PostCard'
+import { api, ghRepo, ghUsername } from '../../lib/axios'
+
+interface Post {}
 
 export function Home() {
+  const [posts, setPosts] = useState<Post[]>()
+  const [query, setQuery] = useState('')
+
+  useEffect(() => {
+    async function searchPosts() {
+      const response = await api.get('/search/issues', {
+        params: {
+          q: `${query}%20repo:${ghUsername}/${ghRepo}`,
+        },
+      })
+
+      const data = response.data
+
+      setPosts(data)
+    }
+
+    const timer = setTimeout(() => {
+      searchPosts()
+    }, 500)
+
+    return () => clearTimeout(timer)
+  }, [query])
+
   return (
     <HomeContainer>
       <UserCard />
@@ -16,7 +49,12 @@ export function Home() {
             <span>6 publicações</span>
           </div>
 
-          <SearchForm />
+          <SearchInput
+            type="text"
+            placeholder="Buscar conteúdo"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
         </PostListHeader>
 
         <PostsList>
