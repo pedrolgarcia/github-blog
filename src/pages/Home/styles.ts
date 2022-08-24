@@ -60,3 +60,15 @@ export const PostsList = styled.div`
 
   grid-gap: 2rem;
 `
+
+export const Empty = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 0;
+
+  p {
+    color: ${({ theme }) => theme['gray-400']};
+  }
+`
