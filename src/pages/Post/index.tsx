@@ -1,26 +1,63 @@
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
 
 import { PostContainer, PostContent } from './styles'
 
 import { PostDetails } from './components/PostDetails'
 
+import { api, ghRepo, ghUsername } from '../../lib/axios'
+
+import { Post as PostType } from '../Home'
+
+type PostParams = {
+  postNumber: string
+}
+
 export function Post() {
+  const [post, setPost] = useState<PostType | null>(null)
+  const { postNumber } = useParams<PostParams>()
+
+  useEffect(() => {
+    async function loadPost() {
+      const response = await api.get(
+        `repos/${ghUsername}/${ghRepo}/issues/${postNumber}`,
+      )
+
+      const {
+        id,
+        number,
+        title,
+        html_url,
+        body,
+        created_at,
+        comments,
+        user: { login },
+      } = response.data
+
+      setPost({
+        id,
+        number,
+        title,
+        html_url,
+        body,
+        created_at,
+        comments,
+        login,
+      })
+    }
+
+    loadPost()
+  }, [postNumber])
+
+  if (!post) return <></>
+
   return (
     <PostContainer>
-      <PostDetails />
+      <PostDetails post={post} />
 
       <PostContent>
-        <ReactMarkdown>
-          Programming languages all have built-in data structures, but these
-          often differ from one language to another. This article attempts to
-          list the built-in data structures available in JavaScript and what
-          properties they have. These can be used to build other data
-          structures. Wherever possible, comparisons with other languages are
-          drawn. Dynamic typing JavaScript is a loosely typed and dynamic
-          language. Variables in JavaScript are not directly associated with any
-          particular value type, and any variable can be assigned (and
-          re-assigned) values of all types:
-        </ReactMarkdown>
+        <ReactMarkdown>{post.body}</ReactMarkdown>
       </PostContent>
     </PostContainer>
   )

@@ -10,15 +10,15 @@ interface PostCardProps {
 }
 
 export function PostCard({ post }: PostCardProps) {
-  const dateFormatted = formatDistanceToNow(new Date(post.created_at), {
+  const formattedCreatedAt = formatDistanceToNow(new Date(post.created_at), {
     locale: pt_BR,
   })
 
   return (
-    <PostCardLink to={post.url}>
+    <PostCardLink to={`/post/${post.number}`}>
       <PostCardHeader>
         <span>{post.title}</span>
-        {dateFormatted && <span>há {dateFormatted}</span>}
+        {formattedCreatedAt && <span>há {formattedCreatedAt}</span>}
       </PostCardHeader>
 
       <PostDescription>{post.body}</PostDescription>

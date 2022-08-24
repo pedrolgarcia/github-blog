@@ -17,7 +17,7 @@ export interface Post {
   id: number
   number: number
   title: string
-  url: string
+  html_url: string
   body: string
   login: string
   created_at: Date
@@ -36,21 +36,27 @@ export function Home() {
         params: { q },
       })
 
-      console.log(response)
-
       const posts: Post[] = response.data.items.map((item: any) => {
-        const { id, number, title, url, body, login, created_at, comments } =
-          item
+        const {
+          id,
+          number,
+          title,
+          html_url,
+          body,
+          created_at,
+          comments,
+          user: { login },
+        } = item
 
         return {
           id,
           number,
           title,
-          url,
+          html_url,
           body,
-          login,
           created_at,
           comments,
+          login,
         }
       })
 

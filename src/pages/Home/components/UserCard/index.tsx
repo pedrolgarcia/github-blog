@@ -57,7 +57,7 @@ export function UserCard() {
         <InfoHeader>
           <strong>{user?.name}</strong>
 
-          <LinkButton href={user?.html_url} target="_blank">
+          <LinkButton href={user?.html_url || ''} target="_blank">
             <span>GITHUB</span>
             <FontAwesomeIcon icon="arrow-up-right-from-square" />
           </LinkButton>

@@ -1,4 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, css } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -27,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 
-export const LinkButton = styled.a`
+const linkButtonStyles = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,4 +47,12 @@ export const LinkButton = styled.a`
     transition: border-bottom-color 0.2s;
     border-bottom-color: ${({ theme }) => theme['blue-300']};
   }
+`
+
+export const LinkButton = styled.a`
+  ${linkButtonStyles}
+`
+
+export const RouterButton = styled(Link)`
+  ${linkButtonStyles}
 `
